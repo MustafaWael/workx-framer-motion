@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-DarkSlateGrey font-Roboto;
+}
+
+@layer components {
+  .btn {
+    @apply rounded-full h-10 min-w-fit px-4 grid place-content-center text-sm font-medium;
+
+    &.primary {
+      @apply bg-orange text-white;
+    }
+
+    &.secondary {
+      @apply bg-opacity-0 text-DarkSlateGrey;
+    }
+  }
+}
+
+
+.masonry {
+  column-count: 2;
+  gap: 10px;
+}
+
+.masonry > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.clip {
+  clip-path: circle(10%);
+}
